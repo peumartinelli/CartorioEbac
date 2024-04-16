@@ -121,13 +121,25 @@ int main ()
 {
     int opcao=0; //Definindo varíaveis 
     int laco=1;
+    char senhadigitada[10]="a";
+    int comparacao;
     
-    for(laco=1;laco=1;)
-	{
-
-	system("cls");
+    
+    printf("### Cartório da EBAC###\n\n");
+    printf("Login de administrador!\n\nDigite a sua senha:");
+    scanf("%s",senhadigitada);
+    
+    comparacao = strcmp(senhadigitada, "admin");
+    
+    if(comparacao == 0)
+    { 
+    	system ("cls");
+    	for(laco=1;laco=1;)
+		{
 	
-	setlocale(LC_ALL, "Portuguese");//definindo linguagem
+		system("cls");
+		
+		setlocale(LC_ALL, "Portuguese");//definindo linguagem
 	
 		printf("### Cartório da EBAC###\n\n");//inicio do menu
 		printf("Escolha a opção desejada do menu : \n\n");
@@ -167,7 +179,13 @@ int main ()
 			break;
 				
 		}
+	}
+	}
+	else
+	printf("Senha incorreta");
+
 	
 	}
-	}
+	
+
 
